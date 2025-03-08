@@ -7,14 +7,6 @@ const msg = document.querySelector("#msg");
 const userScorePara = document.querySelector("#user-score");
 const compScorePara = document.querySelector("#comp-score");
 
-//Computer Choice
-//function (2)
-const genCompChoice = () => {
-    const options = ["rock","paper","scissors"];
-    const randIdx = Math.floor(Math.random() * 3);
-    return options[randIdx];
-};
-
 //function (3)
 const showWinner = (userWin,userChoice,CompChoice) => {
     if (userWin == true) {
@@ -30,6 +22,14 @@ const showWinner = (userWin,userChoice,CompChoice) => {
         msg.innerText = `You Lose! ${CompChoice} beats your ${userChoice}`;
         msg.style.backgroundColor = "red";
     }
+};
+
+//Computer Choice
+//function (2)
+const genCompChoice = () => {
+    const options = ["rock","paper","scissors"];
+    const randIdx = Math.floor(Math.random() * 3);
+    return options[randIdx];
 };
 
 //function (1)
